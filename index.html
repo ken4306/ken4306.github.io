@@ -13,7 +13,6 @@
          const map = {
              "jaziet": 0,
              "taqenus": 0,
-             "taqenus": 0,
              "zehoiwe": 0,
              "kndaaa": 1,
              "smolleaf_emt": 2,
@@ -32,7 +31,7 @@
          ]
          let getResult = () => {
              const id = map[document.getElementById('name').value.toLowerCase()]
-             const str = id ? comment[id] : "找不到這個人，他可能太邊緣了沒在資料庫中。"
+             const str = !isNaN(id)  ? comment[id] : "找不到這個人，他可能太邊緣了沒在資料庫中。"
 
              document.getElementById('result').innerHTML = str
              return false
