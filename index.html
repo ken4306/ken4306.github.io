@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Untitled</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <script>
+         const map = {
+             "jaziet": 0,
+             "taqenus": 0,
+             "taqenus": 0,
+             "zehoiwe": 0,
+             "kndaaa": 1,
+             "smolleaf_emt": 2,
+             "money930": 3,
+             "monkey150": 4,
+             "ruiii_tw": 5
+
+         }
+         const comment = [
+             "溫柔成熟體貼善良忠厚老實誠懇有禮貌超級優秀的高三生",
+             "諾貝爾可愛獎得主，三屆奧運可愛金牌，金氏世界紀錄最可愛保持人。",
+             "糟糕的人，傷透別人的心。",
+             "找不到這個id, 你想找的是monkey150嗎?",
+             "臭矮子長不高。",
+             "超棒的天才小可愛。"
+         ]
+         let getResult = () => {
+             const id = map[document.getElementById('name').value.toLowerCase()]
+             const str = id ? comment[id] : "找不到這個人，他可能太邊緣了沒在資料庫中。"
+
+             document.getElementById('result').innerHTML = str
+             return false
+         }
+
+
+        </script>
+        <style>
+         body {
+             font-family: sans-serif;
+         }
+
+         .input {
+             text-align: center;
+             margin-top: 40px;
+         }
+         .result {
+             text-align: center;
+         }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="input">
+            <form onsubmit="return getResult()">
+                <label for="name">Your name:</label>
+                <input name="name" id="name" type="text" value=""/>
+                <button>enter</button>
+            </form>
+        </div>
+        <div class="result">
+            <p id="result"></p>
+        </div>
+    </body>
+</html>
