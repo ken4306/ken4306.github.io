@@ -18,7 +18,10 @@
              "smolleaf_emt": 2,
              "money930": 3,
              "monkey150": 4,
-             "ruiii_tw": 5
+             "ruiii_tw": 5,
+             "taurus_yuu": 6,
+             "guderianpan": 7,
+             "robinawaterbird": 8
 
          }
          const comment = [
@@ -27,10 +30,14 @@
              "糟糕的人，傷透別人的心。",
              "找不到這個id, 你想找的是monkey150嗎?",
              "臭矮子長不高。",
-             "超棒的天才小可愛。"
+             "超棒的天才小可愛。",
+             "又帥又高還有車的魚生勝利組。",
+             "雖然超級優秀但偶爾會暈船。",
+             "嘴巴很臭的ㄌㄌㄎ。"
          ]
+
          let getResult = () => {
-             const id = map[document.getElementById('name').value.toLowerCase()]
+             const id = map[document.getElementById('name').value.trim().toLowerCase()]
              const str = !isNaN(id)  ? comment[id] : "找不到這個人，他可能太邊緣了沒在資料庫中。"
 
              document.getElementById('result').innerHTML = str
